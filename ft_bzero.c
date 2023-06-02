@@ -6,13 +6,21 @@
 /*   By: ccarnot <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/03 17:42:07 by ccarnot           #+#    #+#             */
-/*   Updated: 2023/05/04 10:34:59 by ccarnot          ###   ########.fr       */
+/*   Updated: 2023/06/02 13:59:18 by ccarnot          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-//#include <stdio.h>
-//#include <strings.h>
 #include "libft.h"
+
+/*******************************************************
+ *  Function: bzero
+ *  Library: <strings.h>
+ *  Description: Fills a block of memory with zeroes.
+ *  Memory allocations: None
+ *  Crash values: n < 0
+		  s is NULL
+ *  Return values: None
+ *******************************************************/
 
 void	ft_bzero(void *s, size_t n)
 {
@@ -22,22 +30,3 @@ void	ft_bzero(void *s, size_t n)
 		n--;
 	}
 }
-
-/*
-int	main(void)
-{
-	char	s[] = "Bonjour les amigos";
-	int	i;
-
-	ft_bzero(s, 5);
-	//bzero(s, 1);
-	i = 0;
-	while (i < 18)
-	{
-		printf("%c", s[i]);
-		i++;
-	}
-	printf("\n");
-	return (0);
-}
-*/

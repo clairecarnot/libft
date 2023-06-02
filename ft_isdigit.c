@@ -6,12 +6,21 @@
 /*   By: ccarnot <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/02 14:55:48 by ccarnot           #+#    #+#             */
-/*   Updated: 2023/05/03 14:16:49 by ccarnot          ###   ########.fr       */
+/*   Updated: 2023/06/02 11:47:14 by ccarnot          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-//#include <stdio.h>
 #include "libft.h"
+
+/****************************************************************************************************
+ *  Function: isdigit
+ *  Library: <ctype.h>
+ *  Description: Determines whether a character is a digit.
+ *  Memory allocations: None
+ *  Crash values: None
+ *  Return values: a non-zero value (usually 1) if the character is a digit, 
+			0 otherwise.
+ ***************************************************************************************************/
 
 int	ft_isdigit(int c)
 {
@@ -20,12 +29,3 @@ int	ft_isdigit(int c)
 	else
 		return (0);
 }
-
-/*
-int	main(void)
-{
-	printf("101 %d\n", ft_isdigit(101));
-	printf("48 %d\n", ft_isdigit(48));
-	return (0);
-}
-*/

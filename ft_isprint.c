@@ -6,12 +6,21 @@
 /*   By: ccarnot <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/03 10:43:27 by ccarnot           #+#    #+#             */
-/*   Updated: 2023/05/03 14:31:46 by ccarnot          ###   ########.fr       */
+/*   Updated: 2023/06/02 11:50:52 by ccarnot          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-//#include <stdio.h>
 #include "libft.h"
+
+/*************************************************************************************
+ *  Function: isprint
+ *  Library: <ctype.h>
+ *  Description: Determines whether a character is printable.
+ *  Memory allocations: None
+ *  Crash values: None
+ *  Return values: Returns a non-zero value (usually 1) if the character is printable, 
+			0 otherwise.
+ ************************************************************************************/
 
 int	ft_isprint(int c)
 {
@@ -20,12 +29,3 @@ int	ft_isprint(int c)
 	else
 		return (0);
 }
-
-/*
-int	main(void)
-{
-	printf("27 >> %d\n", ft_isprint(27));
-	printf("62 >> %d\n", ft_isprint(62));
-	return (0);
-}
-*/

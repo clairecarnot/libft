@@ -6,12 +6,21 @@
 /*   By: ccarnot <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/03 11:14:24 by ccarnot           #+#    #+#             */
-/*   Updated: 2023/05/03 17:14:41 by ccarnot          ###   ########.fr       */
+/*   Updated: 2023/06/02 13:56:29 by ccarnot          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-//#include <stdio.h>
 #include "libft.h"
+
+/*******************************************************
+ *  Function: memset
+ *  Library: <string.h>
+ *  Description: Fills a block of memory with a specified value.
+ *  Memory allocations: None
+ *  Crash values: n < 0
+		  s is NULL
+ *  Return values: Returns a pointer to the memory area.
+ *******************************************************/
 
 void	*ft_memset(void *s, int c, size_t n)
 {
@@ -22,25 +31,3 @@ void	*ft_memset(void *s, int c, size_t n)
 	}
 	return (s);
 }
-
-/*
-int	main(void)
-{
-	char	s[] = "Bonjour les amis";
-
-	ft_memset(s, 42, 4);
-	printf("%s\n", s);
-	return (0);
-AUTRE METHODE :
-
-	size_t	i;
-
-	i = 0;
-	while (i < n && ((unsigned char *)s)[i])
-	{
-		((unsigned char *)s)[i] = c;
-		i++;
-	}
-	return (s);
-}
-*/

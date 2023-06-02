@@ -6,12 +6,26 @@
 /*   By: ccarnot <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/04 09:57:35 by ccarnot           #+#    #+#             */
-/*   Updated: 2023/05/11 17:49:44 by ccarnot          ###   ########.fr       */
+/*   Updated: 2023/06/02 14:32:38 by ccarnot          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-//#include <stdio.h>
 #include "libft.h"
+
+/********************************************************************************************
+ *  Function: memcpy
+ *  Library: <string.h>
+ *  Description: copies  n bytes from memory area src to memory area dest.  
+	The memory areas must not overlap (otherwise: memmove)
+ *  Memory allocations: None
+ *  Crash values:
+			src OR dest is NULL (not protected)
+			n < 0 (not protected)
+			src AND dest are NULL (protected)
+ *  Return values
+			pointer to the destination memory area.
+			NULL if src AND dest are NULL
+ ********************************************************************************************/
 
 void	*ft_memcpy(void *dest, const void *src, size_t n)
 {
@@ -27,38 +41,3 @@ void	*ft_memcpy(void *dest, const void *src, size_t n)
 	}
 	return (dest);
 }
-
-/*
-int	main(void)
-{
-	char	dest[] = "Allo ici la Terre";
-	char	src[] = "Bonjour les amis";
-	char	dest2[] = "Allo ici la Terre";
-	char	src2[] = "Bonjour les amis";
-
-	//char	dest3[] = "";
-	//char	src3[] = "Bonjour les amis";
-	//char	dest4[] = "";
-	//char	src4[] = "Bonjour les amis";
-
-	char	dest5[] = "Allo ici la Terre";
-	char	src5[] = "";
-	char	dest6[] = "Allo ici la Terre";
-	char	src6[] = "";
-
-	ft_memcpy(dest, src, 7);
-	memcpy(dest2, src2, 7);
-	printf("%s\n%s\n%s\n%s\n", dest, src, dest2, src2);
-	printf("\n");
-
-	//ft_memcpy(dest3, src3, 7);
-	//memcpy(dest4, src4, 7); overlap
-	//printf("%s\n%s\n%s\n%s\n", dest3, src3, dest4, src4);
-	//printf("\n");
-
-	printf("%s\n%s\n%s\n%s\n", dest5, src5, dest6, src6);
-	ft_memcpy(dest5, src5, 7);
-	memcpy(dest6, src6, 7);
-	printf("%s\n%s\n%s\n%s\n", dest5, src5, dest6, src6);
-	return (0);
-}*/

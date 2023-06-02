@@ -6,7 +6,7 @@
 /*   By: ccarnot <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/02 11:39:41 by ccarnot           #+#    #+#             */
-/*   Updated: 2023/06/02 11:37:56 by ccarnot          ###   ########.fr       */
+/*   Updated: 2023/06/02 11:41:16 by ccarnot          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,13 +29,3 @@ int	ft_isalpha(int c)
 	else
 		return (0);
 }
-
-/*
-int	main(void)
-{
-	printf("e >>> %d\n", ft_isalpha(101));
-	printf("( >>> %d\n", ft_isalpha(40));
-	printf("4 >>> %d\n", ft_isalpha(52));
-	return (0);
-}
-*/
