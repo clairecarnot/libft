@@ -1,0 +1,18 @@
+Makefile:
+- ajout de la regle so
+- changement ordre (NAME) et all
+
+ft_substr:
+- remplacement du premier malloc avec un ft_strdup("") qui enleve les leaks
+
+testeurs:
+
+tripouille
+
+war machine
+
+libft-unit
+
+libftdestructor
+
+francinette
