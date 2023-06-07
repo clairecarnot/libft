@@ -10,9 +10,21 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-//#include <stdio.h>
-//#include <string.h>
 #include "libft.h"
+
+/*******************************************
+ * Function: memmove
+ * Library: <string.h>
+ * Description: copies n bytes from memory area src to memory area dest.  The memory areas may overlap.
+ * Memory allocations: None
+ * Crash values:
+	- n != 0 AND {src OR dest is NULL} (unprotected)
+	- n < 0 (unprotected)
+ * Return value: 
+	- A pointer to the destination memory block
+	- NULL if src AND dest are NULL (protected)
+ *******************************************/
+
 
 void	*ft_memmove(void *dest, const void *src, size_t n)
 {
@@ -40,42 +52,3 @@ void	*ft_memmove(void *dest, const void *src, size_t n)
 	}
 	return (dest);
 }
-
-/*
-int	main(void)
-{
-	char	tab1[] = "abcdefghijklmno";
-	char	tab1b[] = "abcdefghijklmno";
-	char	tab2[] = "abcdefghijklmno";
-	char	tab2b[] = "abcdefghijklmno";
-	char	tab3[] = "abcdefghijklmno";
-	char	tab3b[] = "abcdefghijklmno";
-	char	tab4[] = "abcdefghijklmno";
-	char	tab4b[] = "abcdefghijklmno";
-	char	tab5[] = "abcdefghijklmno";
-	char	tab5b[] = "abcdefghijklmno";
-	//char	tab5b[] = "012345678901234";
-
-	ft_memmove(tab1 + 5, tab1 + 2, sizeof(char) * 4);
-	memmove(tab1b + 5, tab1b + 2, sizeof(char) * 4);
-	printf("ft_memmove = %s\n   memmove = %s\n", tab1, tab1b);
-
-	ft_memmove(tab2 + 1, tab2 + 12, sizeof(char) * 4);
-	memmove(tab2b + 1, tab2b + 12, sizeof(char) * 4);
-	printf("ft_memmove = %s\n   memmove = %s\n", tab2, tab2b);
-
-	ft_memmove(tab3 + 1, tab3 + 2, sizeof(char) * 4);
-	memmove(tab3b + 1, tab3b + 2, sizeof(char) * 4);
-	printf("ft_memmove = %s\n   memmove = %s\n", tab3, tab3b);
-
-	ft_memmove(tab4 + 12, tab4 + 1, sizeof(char) * 4);
-	memmove(tab4b + 12, tab4b + 1, sizeof(char) * 4);
-	printf("ft_memmove = %s\n   memmove = %s\n", tab4, tab4b);
-
-	ft_memmove(tab5 + 3, tab5 + 3, sizeof(char) * 4);
-	memmove(tab5b + 3, tab5b + 3, sizeof(char) * 4);
-	printf("ft_memmove = %s\n   memmove = %s\n", tab5, tab5b);
-
-	return (0);
-}
-*/

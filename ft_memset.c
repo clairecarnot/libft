@@ -17,8 +17,8 @@
  *  Library: <string.h>
  *  Description: Fills a block of memory with a specified value.
  *  Memory allocations: None
- *  Crash values: n < 0
-		  s is NULL
+ *  Crash values: n < 0 (unprotected)
+		  s is NULL (unprotected)
  *  Return values: Returns a pointer to the memory area.
  *******************************************************/
 

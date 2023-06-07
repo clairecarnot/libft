@@ -17,7 +17,7 @@
  *  Library: <string.h>
  *  Description: Calculates the length of a string.
  *  Memory allocations: None
- *  Crash values: When s is NULL
+ *  Crash values: When s is NULL (unprotected)
  *  Return values: the length of the string as a size_t value.
  ************************************************************/
 

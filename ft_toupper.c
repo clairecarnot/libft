@@ -10,9 +10,18 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
-#include <ctype.h>
 #include "libft.h"
+
+/*******************************************
+ * Function: toupper
+ * Library: <ctype.h>
+ * Description: converts lowercase characters to uppercase
+ * Memory allocations: None
+ * Crash values: None
+ * Return value:
+ * 	- converted uppercase character
+ * 	- or the input character if the conversion was not possible
+ *******************************************/
 
 int	ft_toupper(int c)
 {
@@ -20,16 +29,3 @@ int	ft_toupper(int c)
 		return (c - 32);
 	return (c);
 }
-
-/*
-int	main(void)
-{
-	printf("%d\n%d\n", ft_toupper('m'), toupper('m'));
-	printf("%d\n%d\n", ft_toupper('R'), toupper('R'));
-	printf("%d\n%d\n", ft_toupper('('), toupper('('));
-	printf("%d\n%d\n", ft_toupper('0'), toupper('0'));
-	printf("%d\n%d\n", ft_toupper(1000), toupper(1000));
-	printf("%d\n%d\n", ft_toupper(-1), toupper(-1));
-	return (0);
-}
-*/

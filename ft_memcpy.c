@@ -19,12 +19,11 @@
 	The memory areas must not overlap (otherwise: memmove)
  *  Memory allocations: None
  *  Crash values:
-			src OR dest is NULL (not protected)
-			n < 0 (not protected)
-			src AND dest are NULL (protected)
+			n != 0 AND {src OR dest is NULL} (unprotected)
+			n < 0 (unprotected)
  *  Return values
-			pointer to the destination memory area.
-			NULL if src AND dest are NULL
+			A pointer to the destination memory area
+			NULL if src AND dest are NULL (protected)
  ********************************************************************************************/
 
 void	*ft_memcpy(void *dest, const void *src, size_t n)

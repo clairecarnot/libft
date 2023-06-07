@@ -10,9 +10,18 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
-#include <ctype.h>
 #include "libft.h"
+
+/*******************************************
+ * Function: tolower
+ * Library: <ctype.h>
+ * Description: converts uppercase characters to lowercase
+ * Memory allocations: None
+ * Crash values: None
+ * Return value:
+ *      - converted lowercase character
+ *      - or the input character if the conversion was not possible
+ *******************************************/
 
 int	ft_tolower(int c)
 {
@@ -20,16 +29,3 @@ int	ft_tolower(int c)
 		return (c + 32);
 	return (c);
 }
-
-/*
-int     main(void)
-{
-        printf("%d\n%d\n", ft_tolower('m'), tolower('m'));
-        printf("%d\n%d\n", ft_tolower('R'), tolower('R'));
-        printf("%d\n%d\n", ft_tolower('('), tolower('('));
-        printf("%d\n%d\n", ft_tolower('0'), tolower('0'));
-        printf("%d\n%d\n", ft_tolower(1000), tolower(1000));
-        printf("%d\n%d\n", ft_tolower(-1), tolower(-1));
-        return (0);
-}
-*/

@@ -10,11 +10,18 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
-#include <string.h>
 #include "libft.h"
-#include <bsd/string.h>
-#include <unistd.h>
+
+/*******************************************
+ * Function: strlcpy
+ * Library: <string.h>
+ * Description: copies a string into a destination buffer, ensuring null termination and preventing buffer overflow.
+ * Memory allocations: None
+ * Crash values:
+		- dst buffer size < size (unprotected)
+		- size != 0 AND {src or dst is NULL} (unprotected)
+ * Return value: The length of the source string
+ *******************************************/
 
 size_t	ft_strlcpy(char *dst, const char *src, size_t size)
 {
@@ -31,37 +38,3 @@ size_t	ft_strlcpy(char *dst, const char *src, size_t size)
 	dst[i] = '\0';
 	return (ft_strlen(src));
 }
-
-/*
-int	main(void)
-{
-	char dst1[20];
-	char src1[] = "Beau temps pour la saison";
-	char dst2[20];
-	char src2[] = "Beau temps pour la saison";
-
-	char dst3[20];
-	char src3[] = "";
-	char dst4[20];
-	char src4[] = "";
-
-	char dst5[20];
-	char *src5;
-	char dst6[20];
-	char *src6;
-
-	src5 = 0x0;
-	src6 = 0x0;
-
-	printf("%zu\n %zu\n", ft_strlcpy(dst1, src1, 10), strlcpy(dst2, src2, 10));
-	printf("%s\n %s\n", dst1, dst2);
-
-	printf("%zu\n %zu\n", ft_strlcpy(dst3, src3, 10), strlcpy(dst4, src4, 10));
-	printf("%s\n %s\n", dst3, dst4);
-
-	printf("%zu\n %zu\n", ft_strlcpy(dst5, src5, 10), strlcpy(dst6, src6, 10));
-	printf("%s\n %s\n", dst5, dst6);
-
-	return (0);
-}
-*/

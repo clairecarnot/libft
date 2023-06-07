@@ -17,8 +17,8 @@
  *  Library: <strings.h>
  *  Description: Fills a block of memory with zeroes.
  *  Memory allocations: None
- *  Crash values: n < 0
-		  s is NULL
+ *  Crash values: n < 0 (unprotected)
+		  s is NULL (unprotected)
  *  Return values: None
  *******************************************************/
 
