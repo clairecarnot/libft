@@ -10,9 +10,18 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
-#include <string.h>
 #include "libft.h"
+
+/*******************************************
+ * Function: strrchr
+ * Library: <string.h>
+ * Description: searches for the first occurrence of a specific character in a string * Memory allocations: None
+ * Crash values:
+ *      - s is NULL (unprotected)
+ * Return value: 
+ *      - pointer to the first occurrence of the character in the string
+ *      - NULL if the character is not found
+ *******************************************/
 
 char	*ft_strrchr(const char *s, int c)
 {
@@ -31,18 +40,3 @@ char	*ft_strrchr(const char *s, int c)
 	}
 	return (0x0);
 }
-
-/*
-int	main(void)
-{
-	char	s[] = "Cash rules everything around me";
-
-	printf("%s\n%s\n", ft_strrchr(s, 'g'), strrchr(s, 'g'));
-	printf("%s\n%s\n", ft_strrchr(s, 'a'), strrchr(s, 'a'));
-	printf("%s\n%s\n", ft_strrchr(s, 'k'), strrchr(s, 'k'));
-	printf("%s\n%s\n", ft_strrchr(s, '\0'), strrchr(s, '\0'));
-	printf("%s\n%s\n", ft_strrchr(s, -1), strrchr(s, -1));
-	printf("%s\n%s\n", ft_strrchr(s, 1000), strrchr(s, 1000));
-	return (0);
-}
-*/
