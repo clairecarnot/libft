@@ -10,9 +10,18 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
-#include <stdlib.h>
 #include "libft.h"
+
+/*******************************************
+ * Function: ft_strjoin
+ * Description: allocates and returns a new string, which is the result of the concatenation of ’s1’ and ’s2’
+ * Memory allocations:
+ *      - 1 malloc, 0 free
+ * Crash values: None
+ * Return value: 
+ *   - Pointer to the new string
+ *   - NULL if s1 or s2 is NULL, or if the memory allocation fails
+ *******************************************/
 
 char	*ft_strjoin(char const *s1, char const *s2)
 {
@@ -40,32 +49,3 @@ char	*ft_strjoin(char const *s1, char const *s2)
 	dest[i + j] = '\0';
 	return (dest);
 }
-
-/*
-int	main(void)
-{
-	char const	c1[] = "Joyeux ";
-	char const	c2[] = "anniversaire";
-	char const	c3[] = "";
-	char const	c4[] = "anniversaire";
-	char const	c5[] = "Joyeux ";
-	char const	c6[] = "";
-	char const	c7[] = "";
-	char const	c8[] = "";
-	char const	*c9;
-	char const	*c10;
-	char const	c11[] = "Joyeux ";
-	char const	*c12;
-
-	c9 = 0x0;
-	c10 = 0x0;
-	c12 = 0x0;
-	printf("%s\n", ft_strjoin(c1, c2));
-	printf("%s\n", ft_strjoin(c3, c4));
-	printf("%s\n", ft_strjoin(c5, c6));
-	printf("%s\n", ft_strjoin(c7, c8));
-	printf("%p\n", ft_strjoin(c9, c10));
-	printf("%p\n", ft_strjoin(c11, c12));
-	return (0);
-}
-*/

@@ -10,9 +10,19 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdlib.h>
-#include <stdio.h>
 #include "libft.h"
+
+/*******************************************
+ * Function: ft_split
+ * Description: allocates and returns an array of strings obtained by splitting ’s’ using the character ’c’ as a delimiter. The array must end with a NULL pointer
+ * Memory allocations:
+ *      - 1 char** malloc, 0 free unless mallocs fail
+ *      - n = number of words mallocs, 0 frees unless mallocs fail
+ * Crash values: None
+ * Return value: 
+ *   - The array of new strings resulting from the split
+ *   - NULL if s is NULL or if the memory allocation fails
+ *******************************************/
 
 static int	ft_nstr(char const *s, char c)
 {
@@ -86,82 +96,3 @@ char	**ft_split(char const *s, char c)
 	}
 	return (d);
 }
-
-/*
-int	main(void)
-{
-	char	**dest1;
-	char const	*e1 = 0x0;
-	char	c1;
-	int	i;
-
-	i = 0;
-	c1 = '?';
-	dest1 = ft_split(e1, c1);
-	if (dest1 == 0x0)
-		printf("dest == NULL\n");
-	else 
-	{
-		while (dest1[i])
-			printf("%s\n", dest1[i++]);
-	}
-	return (0);
-}
-
-int	main(void)
-{
-	char	**dest1;
-	char	**dest2;
-	char	**dest3;
-	char	**dest4;
-	char	**dest5;
-	char	**dest6;
-	char	**dest7;
-	char	e1[] = "???Le meilleur?repos est celui qui suit le travail????";
-	char	e2[] = "?Le meilleur?repos est celui qui suit le travail";
-	char	e3[] = "Le meilleur?repos est celui qui suit le travail?";
-	char	e4[] = "Le meilleur?repos est celui ?qui suit le travail";
-	char	e5[] = "";
-	char	e6[] = "Le meilleur?repos est celui ?qui suit le travail";
-	char	e7[] = "Le meilleur repos est celui qui suit le travail";
-	char	c1;
-	char	c2;
-	int	i;
-	
-	i = 0;
-	c1 = '?';
-	c2 = '\0';
-	dest1 = ft_split(e1, c1);
-	dest2 = ft_split(e2, c1);
-	dest3 = ft_split(e3, c1);
-	dest4 = ft_split(e4, c1);
-	dest5 = ft_split(e5, c1);
-	dest6 = ft_split(e6, c2);
-	dest7 = ft_split(e7, c1);
-	while (dest1[i])
-		printf("%s\n", dest1[i++]);
-	i = 0;
-	while (dest1[i])
-		free(dest1[i++]);
-	free(dest1);
-	i = 0;
-	while (dest2[i])
-		printf("%s\n", dest2[i++]);
-	i = 0;
-	while (dest3[i])
-		printf("%s\n", dest3[i++]);
-	i = 0;
-	while (dest4[i])
-		printf("%s\n", dest4[i++]);
-	i = 0;
-	while (dest5[i])
-		printf("%s\n", dest5[i++]);
-	i = 0;
-	while (dest6[i])
-		printf("%s\n", dest6[i++]);
-	i = 0;
-	while (dest7[i])
-		printf("%s\n", dest7[i++]);
-	return (0);
-}
-*/

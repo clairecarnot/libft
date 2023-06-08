@@ -10,9 +10,19 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdlib.h>
-#include <stdio.h>
 #include "libft.h"
+
+/*******************************************
+ * Function: ft_substr
+ * Description: allocates and returns a substring from the string ’s’. The substring begins at index ’start’ and is of maximum size ’len’
+ * Memory allocations:
+ *      - 1 malloc, 0 free
+ * Crash values:
+ *      - result undefined when start < 0 or len < 0
+ * Return value: 
+ *   - Pointer to the extracted substring.
+ *   - NULL if s is NULL or if the memory allocation fails
+ *******************************************/
 
 static size_t	ft_shortest(size_t n1, size_t n2)
 {
@@ -38,26 +48,3 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 	ft_strlcpy(d, s + start, d_len + 1);
 	return (d);
 }
-
-/*
-int	main(void)
-{
-	char const	b1[] = "Toute la jungle est ma maison.";
-	char const	b2[] = "";
-	char const	*b3;
-	char const	b4[] = "abc";
-
-	b3 = 0x0;
-
-	printf("%s\n", ft_substr(b1, 6, 10));
-
-	printf("b1 case2 >>> %p\n", ft_substr(b1, 100, 10));
-	printf("b1 case3 >>> %p\n", ft_substr(b1, 6, 0));
-	printf("b2 >>> %p\n", ft_substr(b2, 6, 10));
-
-	printf("b3 >>> %p\n", ft_substr(b3, 6, 10));
-
-	printf("%s\n", ft_substr(b4, 1, 10));
-	return (0);
-}
-*/
