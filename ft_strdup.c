@@ -10,10 +10,20 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
-#include <string.h>
 #include "libft.h"
-#include <stdlib.h>
+
+/*******************************************
+ * Function: strdup
+ * Library: <string.h>
+ * Description: returns a pointer to a new string which is a duplicate of the string s
+ * Memory allocations:
+ * 	- 1 malloc, 0 free
+ * Crash values:
+ * 	- s is NULL
+ * Return value: 
+ *   - Pointer to the duplicated string.
+ *   - NULL if the memory allocation fails.
+ *******************************************/
 
 char	*ft_strdup(const char *s)
 {
@@ -32,14 +42,3 @@ char	*ft_strdup(const char *s)
 	dest[i] = '\0';
 	return (dest);
 }
-
-/*
-int	main(void)
-{
-	const char	a[] = "Paroles que tous ces mots";
-
-	printf("%s\n%s\n", ft_strdup(a), strdup(a));
-	printf("%s\n%s\n", ft_strdup(""), strdup(""));
-	return (0);
-}
-*/

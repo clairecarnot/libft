@@ -10,9 +10,19 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
-#include <stdlib.h>
 #include "libft.h"
+
+/*******************************************
+ * Function: calloc
+ * Library: <stdlib.h>
+ * Description: allocates memory for an array of nmemb elements of size bytes, initializing all bytes to zero.
+ * Memory allocations:
+ * 	- 1 alloc, 0 free
+ * Crash values:
+ * Return value: 
+ *   - Pointer to the allocated memory block
+ *   - NULL if the memory allocation fails
+ *******************************************/
 
 void	*ft_calloc(size_t nmemb, size_t size)
 {
@@ -31,27 +41,3 @@ void	*ft_calloc(size_t nmemb, size_t size)
 	ft_bzero(dest, nmemb * size);
 	return (dest);
 }
-
-/*
-int	main(void)
-{
-	char	*dest;
-	char	*destb;
-	char	*dest2;
-	char	*dest2b;
-
-	dest = ft_calloc(sizeof(char), 4);
-	destb = calloc(sizeof(char), 4);
-	dest2 = ft_calloc(30, 1);
-	dest2b = calloc(30, 1);
-	printf("%p\n", dest);
-	printf("%p\n", destb);
-	printf("%p\n", dest2);
-	printf("%p\n", dest2b);
-	free(dest);
-	free(destb);
-	free(dest2);
-	free(dest2b);
-	return (0);
-}
-*/
