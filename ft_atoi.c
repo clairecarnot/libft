@@ -10,9 +10,19 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
-#include <stdlib.h>
 #include "libft.h"
+
+/*******************************************
+ * Function: atoi
+ * Library: <stdlib.h>
+ * Description: converts the initial portion of the string pointed to by nptr to int
+ * Memory allocations: None
+ * Crash values:
+ * 	- nptr is NULL 
+ * Return values:
+ * 	- the converted integer value
+ * 	- 0 if the input string cannot be converted
+ *******************************************/
 
 int	ft_atoi(const char *nptr)
 {
@@ -38,16 +48,3 @@ int	ft_atoi(const char *nptr)
 	}
 	return (n * sign);
 }
-
-/*
-int	main(void)
-{
-	printf("%d\n%d\n", ft_atoi("1234"), atoi("1234"));
-	printf("%d\n%d\n", ft_atoi("      	-1234"), atoi("            -1234"));
-	printf("%d\n%d\n", ft_atoi("-2147483648"), atoi("-2147483648"));
-	printf("%d\n%d\n", ft_atoi("2147483647"), atoi("2147483647"));
-	printf("%d\n%d\n", ft_atoi(""), atoi(""));
-	printf("%d\n%d\n", ft_atoi("++-1234"), atoi("++-1234"));
-	return (0);
-}
-*/

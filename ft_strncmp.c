@@ -10,9 +10,18 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
-#include <string.h>
 #include "libft.h"
+
+/*******************************************
+ * Function: strncmp
+ * Library: <string.h>
+ * Description: compares at most n bytes of two strings s1 and s2.
+ * Memory allocations: None
+ * Crash values:
+ * 	- n != 0 AND {s1 or/and s2 is NULL}
+ * Return value: 
+ *   - an integer less than, equal to, or greater than zero if the first n characters of the strings are found to be less than, equal to, or greater than each other, respectively.
+ *******************************************/
 
 int	ft_strncmp(const char *s1, const char *s2, size_t n)
 {
@@ -27,20 +36,3 @@ int	ft_strncmp(const char *s1, const char *s2, size_t n)
 	}
 	return (0);
 }
-
-/*
-int	main(void)
-{
-	printf("%d\n", ft_strncmp("test\200", "test\0", 6));
-	printf("%d\n", strncmp("test\200", "test\0", 6));
-	printf("%d\n%d\n", ft_strncmp("abc", "abd", -1), strncmp("abc", "abd", -1));
-	printf("%d\n%d\n", ft_strncmp("abc", "abd", 3), strncmp("abc", "abd", 3));
-	printf("%d\n%d\n", ft_strncmp("abc", "abc", 3), strncmp("abc", "abc", 3));
-	printf("%d\n%d\n", ft_strncmp("abc", "abd", 2), strncmp("abc", "abd", 2));
-	printf("%d\n%d\n", ft_strncmp("abc", "ab", 3), strncmp("abc", "ab", 3));
-	printf("%d\n%d\n", ft_strncmp("", "abd", 2), strncmp("", "abd", 2));
-	printf("%d\n%d\n", ft_strncmp("abc", "", 2), strncmp("abc", "", 2));
-	printf("%d\n%d\n", ft_strncmp("abc", "", 0), strncmp("abc", "", 0));
-	return (0);
-}
-*/

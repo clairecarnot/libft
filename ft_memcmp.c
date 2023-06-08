@@ -10,9 +10,18 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
-#include <string.h>
 #include "libft.h"
+
+/*******************************************
+ * Function: memcmp
+ * Library: <string.h>
+ * Description: compares at most n bytes between two memory blocks s1 and s2
+ * Memory allocations: None
+ * Crash values:
+ * 	- n != 0 AND {s1 and/or s2 is NULL}
+ * Return value: 
+ * 	- an  integer  less  than,  equal  to,  or greater than zero if the first n bytes of s1 is found, respectively, to be less than, to match, or be greater than the first n bytes of s2.
+ *******************************************/
 
 int	ft_memcmp(const void *s1, const void *s2, size_t n)
 {
@@ -31,30 +40,3 @@ int	ft_memcmp(const void *s1, const void *s2, size_t n)
 	}
 	return (0);
 }
-
-/*
-int	main(void)
-{
-	char 	p1[] = "abc";
-	char	p2[] = "ab";
-
-	char 	p3[] = "abc";
-	char	p4[] = "abd";
-
-	char 	p5[] = "abc";
-	char	p6[] = "ab";
-
-	char 	p7[] = "";
-	char	p8[] = "abc";
-
-	char 	p9[] = "abc";
-	char	p10[] = "";
-
-	printf("%d\n%d\n", ft_memcmp(p1, p2, 3), memcmp(p1, p2, 3));
-	printf("%d\n%d\n", ft_memcmp(p3, p4, 2), memcmp(p3, p4, 2));
-	printf("%d\n%d\n", ft_memcmp(p5, p6, 3), memcmp(p5, p6, 3));
-	printf("%d\n%d\n", ft_memcmp(p7, p8, 3), memcmp(p7, p8, 3));
-	printf("%d\n%d\n", ft_memcmp(p9, p10, 3), memcmp(p9, p10, 3));
-	return (0);
-}
-*/

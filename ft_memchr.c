@@ -10,9 +10,19 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
-#include <string.h>
 #include "libft.h"
+
+/*******************************************
+ * Function: memchr
+ * Library: <string.h>
+ * Description: searches for the first occurrence of a specific byte in a memory block.
+ * Memory allocations: None
+ * Crash values:
+ * 	- s is NULL AND n != 0
+ * Return value: 
+ *   - Pointer to the first occurrence of the byte in the memory block.
+ *   - NULL if the byte is not found within the specified number of bytes.
+ *******************************************/
 
 void	*ft_memchr(const void *s, int c, size_t n)
 {
@@ -22,26 +32,8 @@ void	*ft_memchr(const void *s, int c, size_t n)
 	while (i < n)
 	{
 		if (((unsigned char *)s)[i] == (unsigned char)c)
-			return (&((void *)s)[i]);
+			return ((void *)s + i);
 		i++;
 	}
 	return (0x0);
 }
-
-/*
-int	main(void)
-{
-	char	p[] = "Non mais allo quoi";
-	int	tab[7] = {-49, 49, 1, -1, 0, -2, 2};
-
-	printf("%s\n%s\n", (char *)ft_memchr(p, 'a', 8), (char *)memchr(p, 'a', 8));
-	printf("%s\n%s\n", (char *)ft_memchr(p, 'a', 3), (char *)memchr(p, 'a', 3));
-	printf("%s\n%s\n", (char *)ft_memchr(p, '\0', 40), (char *)memchr(p, '\0', 40));
-	printf("%s\n%s\n", (char *)ft_memchr(p, -1, 3), (char *)memchr(p, -1, 3));
-	printf("%s\n%s\n", (char *)ft_memchr(p, 'a', 0), (char *)memchr(p, 'a', 0));
-	printf("%s\n%s\n", (char *)ft_memchr(tab, -1, 7), (char *)memchr(tab, -1, 7));
-	printf("%s\n%s\n", (char *)ft_memchr(tab, 49, 2), (char *)memchr(tab, 49, 2));
-	printf("%s\n%s\n", (char *)ft_memchr(tab, 49, 1), (char *)memchr(tab, 49, 1));
-	return (0);
-}
-*/
