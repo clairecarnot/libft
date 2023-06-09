@@ -10,18 +10,19 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
 #include "libft.h"
 
-/*
-void	g(unsigned int i, char *c)
-{
-	if (i % 2 == 0)
-		*c = 'p';
-}
-*/
+/*******************************************
+ * Function: ft_strmapi
+ * Description: applies the function ’f’ on each character of the string passed as argument, passing its index as first argument. Each character is passed by address to ’f’ to be modified if necessary
+ * Memory allocations: None
+ * Crash values:
+ *      - (*f) is NULL (unprotected)
+ *      - s is NULL (protected)
+ * Return value: None
+ *******************************************/
 
-void	ft_striteri(char *s, void (*g)(unsigned int, char*))
+void	ft_striteri(char *s, void (*f)(unsigned int, char*))
 {
 	unsigned int	i;
 
@@ -30,30 +31,7 @@ void	ft_striteri(char *s, void (*g)(unsigned int, char*))
 		return ;
 	while (s[i])
 	{
-		(*g)(i, &s[i]);
+		(*f)(i, &s[i]);
 		i++;
 	}
 }
-
-/*
-int	main(void)
-{
-	char	g1[] = "Viser la lune ca me fait pas peur";
-	char	g2[] = "";
-	char	*g3;
-
-	g3 = 0x0;
-	ft_striteri(g1, (*f));
-	printf("%s\n", g1);
-
-	ft_striteri(g2, (*f));
-	printf("%s\n", g2);
-
-	ft_striteri(g3, (*f));
-	if (!g3)
-		printf("tab nul");
-	else	
-		printf("%s\n", g3);
-	return (0);
-}
-*/

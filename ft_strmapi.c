@@ -10,18 +10,19 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdlib.h>
-#include <stdio.h>
 #include "libft.h"
 
-/*
-char	f(unsigned int i, char c)
-{
-	if (i % 2 == 0)
-		return ('p');
-	return (c);
-}
-*/
+/*******************************************
+ * Function: ft_strmapi
+ * Description: Applies the function ’f’ to each character of the string ’s’, and passing its index as first argument to create a new string resulting from successive applications of ’f’
+ * Memory allocations:
+ *      - 1 malloc, 0 free
+ * Crash values:
+ * 	- (*f) is NULL
+ * Return value: 
+ *   - The string representing the integer
+ *   - NULL if s is NULL or if the memory allocation fails
+ *******************************************/
 
 char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 {
@@ -42,33 +43,3 @@ char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 	d[i] = '\0';
 	return (d);
 }
-
-/*
-int	main(void)
-{
-	char const	f1[] = " 123 Lalalala (hihi)";
-	char const	f2[] = "";
-	char const	*f3;
-	char	*dst1;
-	char	*dst2;
-	char	*dst3;
-
-	f3 = 0x0;
-	dst1 = ft_strmapi(f1, (*f));
-	if (!dst1)
-		printf("dst est null");
-	else
-		printf("%s\n", dst1);
-	dst2 = ft_strmapi(f2, (*f));
-	if (!dst2)
-		printf("dst est null");
-	else
-		printf("%s\n", dst2);
-	dst3 = ft_strmapi(f3, (*f));
-	if (!dst3)
-		printf("dst est null");
-	else
-		printf("%s\n", dst3);
-	return (0);
-}
-*/

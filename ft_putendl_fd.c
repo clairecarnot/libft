@@ -10,12 +10,17 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <unistd.h>
-#include <stdio.h>
-#include <sys/types.h>
-#include <sys/stat.h>
-#include <fcntl.h>
 #include "libft.h"
+
+/*******************************************
+ * Function: ft_putendl_fd
+ * Description: outputs the string ’s’ to the given file descriptor followed by a newline
+ * Memory allocations: None
+ * Crash values:
+ *      - fd is not valid (unprotected)
+ *      - s is NULL (protected)
+ * Return value: None
+ *******************************************/
 
 void	ft_putendl_fd(char *s, int fd)
 {
@@ -25,25 +30,3 @@ void	ft_putendl_fd(char *s, int fd)
 		write(fd, "\n", 1);
 	}
 }
-
-/*
-int	main(void)
-{
-	char	i[] = "bla bla bla";
-	int	fd;
-
-	fd = open("test3.txt", O_WRONLY | O_CREAT | O_APPEND, S_IRUSR | S_IWUSR);
-	if (fd == -1)
-	{
-		printf("open failed");
-		return (1);
-	}
-	ft_putendl_fd(i, fd);
-	if (close(fd) == -1)
-	{
-		printf("close failed");
-		return (1);
-	}
-	return (0);
-}
-*/

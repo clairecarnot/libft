@@ -20,6 +20,9 @@
 # include <ctype.h>
 # include <bsd/string.h>
 # include <bsd/bsd.h>
+# include <sys/types.h>
+# include <sys/stat.h>
+# include <fcntl.h>
 
 typedef struct s_list
 {

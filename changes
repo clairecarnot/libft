@@ -5,6 +5,13 @@ Makefile:
 ft_substr:
 - remplacement du premier malloc avec un ft_strdup("") qui enleve les leaks
 
+ft_itoa
+chgt fonction ft_countn (int -> long int)
+
+ft_split 
+note1: dans ft_strlenc le fait de passer tous les c au debut ne sert a rien (le cas n'arrivera pas, deja gere)
+note2: pour compter les mots, methode plus simple (voir fonction perso count_words)
+
 testeurs:
 
 tripouille
