@@ -10,14 +10,25 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdlib.h>
-#include <stdio.h>
 #include "libft.h"
 
-static int	ft_countn(long int n)
+/*******************************************
+ * Function: ft_itoa
+ * Description: allocates and returns a string representing the integer received as an argument
+ * Memory allocations:
+ *      - 1 malloc, 0 free
+ * Crash values: None
+ * Return value: 
+ *   - The string representing the integer
+ *   - NULL if the memory allocation fails
+ *******************************************/
+
+static int	ft_countn(int nb)
 {
 	int	i;
+	long int	n;
 
+	n = nb;
 	i = 1;
 	if (n < 0)
 	{
@@ -56,16 +67,3 @@ char	*ft_itoa(int n)
 		d[0] = '-';
 	return (d);
 }
-
-/*
-int	main(void)
-{
-	printf("%s\n", ft_itoa(5));
-	printf("%s\n", ft_itoa(0));
-	printf("%s\n", ft_itoa(-42));
-	printf("%s\n", ft_itoa(542));
-	printf("%s\n", ft_itoa(-2147483648));
-	printf("%s\n", ft_itoa(2147483647));
-	return (0);
-}
-*/
