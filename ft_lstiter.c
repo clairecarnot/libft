@@ -10,8 +10,16 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
 #include "libft.h"
+
+/*******************************************
+ * Function: ft_lstiter
+ * Description: Iterates the list ’lst’ and applies the function ’f’ on the content of each node.
+ * Memory allocations: None
+ * Crash values:
+ *      - (*f) is NULL
+ * Return value: None
+ *******************************************/
 
 void	ft_lstiter(t_list *lst, void (*f)(void *))
 {

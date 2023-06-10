@@ -10,8 +10,15 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
 #include "libft.h"
+
+/*******************************************
+ * Function: ft_lstlast
+ * Description: Returns the last node of the list.
+ * Memory allocations: None
+ * Crash values: None
+ * Return value: Last node of the list
+ *******************************************/
 
 t_list	*ft_lstlast(t_list *lst)
 {
@@ -19,22 +26,3 @@ t_list	*ft_lstlast(t_list *lst)
 		lst = lst->next;
 	return (lst);
 }
-
-/*
-int	main(void)
-{
-	t_list	r1;
-	t_list	r2;
-	t_list	r3;
-	t_list	*lst;
-
-	r1.content = "blabla";
-	r2.content = "blibli";
-	r3.content = "blublu";
-	r1.next = &r2;
-	r2.next = &r3;
-	r3.next = 0x0;;
-	lst = &r1;
-	printf("%s\n", (char *)ft_lstlast(lst)->content);
-	return (0);
-}*/

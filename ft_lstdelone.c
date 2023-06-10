@@ -10,9 +10,15 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdlib.h>
-#include <stdio.h>
 #include "libft.h"
+
+/*******************************************
+ * Function: ft_lstdelone
+ * Description: Takes as a parameter a node and frees the memory of the node’s content using the function ’del’ given as a parameter and free the node. The memory of ’next’ must not be freed 
+ * Memory allocations: None
+ * Crash values: None
+ * Return value: None
+ *******************************************/
 
 void	ft_lstdelone(t_list *lst, void (*del)(void*))
 {
@@ -23,35 +29,3 @@ void	ft_lstdelone(t_list *lst, void (*del)(void*))
 		free(lst);
 	}
 }
-
-/*
-int	main(void)
-{
-	t_list	s1;
-	t_list	s2;
-	t_list	s3;
-	t_list	*lst;
-	t_list	*lprint;
-
-	s1.content = "phrase1";
-	s2.content = "phrase2";
-	s3.content = "phrase3";
-	s1.next = &s2;
-	s2.next = &s3;
-	s3.next = 0x0;
-	lst = &s2;
-	lprint = &s1;
-	while (lprint)
-	{
-		printf("%s\n", (char *)lprint->content);
-		lprint = lprint->next;
-	}
-	ft_lstdelone(lst, (*del));
-	lprint = &s1;
-	while (lprint)
-	{
-		printf("%s\n", (char *)lprint->content);
-		lprint = lprint->next;
-	}
-	return (0);
-}*/

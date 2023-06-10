@@ -10,8 +10,15 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
 #include "libft.h"
+
+/*******************************************
+ * Function: ft_lstsize
+ * Description: Counts the number of nodes in a list
+ * Memory allocations: None
+ * Crash values: None
+ * Return value: The length of the list
+ *******************************************/
 
 int	ft_lstsize(t_list *lst)
 {
@@ -25,22 +32,3 @@ int	ft_lstsize(t_list *lst)
 	}
 	return (i);
 }
-
-/*
-int	main(void)
-{
-	t_list	q1;
-	t_list	q2;
-	t_list	q3;
-	t_list	*lst;
-
-	lst = &q1;
-	q1.content ="et un";
-	q2.content ="et deux";
-	q3.content ="et trois";
-	q1.next = &q2;
-	q2.next = &q3;
-	q3.next = 0x0;
-	printf("%d\n", ft_lstsize(lst));
-	return (0);
-}*/

@@ -10,9 +10,15 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
-#include <stdlib.h>
 #include "libft.h"
+
+/*******************************************
+ * Function: ft_lstadd_back
+ * Description: Adds the node ’new’ at the end of the list. 
+ * Memory allocations: None
+ * Crash values: None
+ * Return value: None
+ *******************************************/
 
 void	ft_lstadd_back(t_list **lst, t_list *new)
 {
@@ -28,37 +34,3 @@ void	ft_lstadd_back(t_list **lst, t_list *new)
 		ptr->next = new;
 	}
 }
-
-/*
-int	main(void)
-{
-	t_list	r1;
-	t_list	r2;
-	t_list	r3;
-	t_list	new;
-	t_list	*lst;
-
-	r1.content = "chantons ";
-	r2.content = "sous ";
-	r3.content = "la pluie ";
-	new.content = "gaiement";
-	r1.next = &r2;
-	r2.next = &r3;
-	r3.next = 0x0;
-	new.next = 0x0;
-	lst = &r1;
-	while (lst)
-	{
-		printf("%s\n", (char *)lst->content);
-		lst = lst->next;
-	}
-	lst = &r1;
-	ft_lstadd_back(&lst, &new);
-	lst = &r1;
-	while (lst)
-	{
-		printf("%s\n", (char *)lst->content);
-		lst = lst->next;
-	}
-	return (0);
-}*/

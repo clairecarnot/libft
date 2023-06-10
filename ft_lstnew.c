@@ -10,9 +10,15 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
-#include <stdlib.h>
 #include "libft.h"
+
+/*******************************************
+ * Function: ft_lstnew
+ * Description: allocates and returns a new node. The member variable ’content’ is initialized with the value of the parameter ’content’. The variable ’next’ is initialized to NULL
+ * Memory allocations: 1 malloc, 0 free
+ * Crash values: None
+ * Return value: the new node
+ *******************************************/
 
 t_list	*ft_lstnew(void *content)
 {
@@ -25,17 +31,3 @@ t_list	*ft_lstnew(void *content)
 	d->next = 0x0;
 	return (d);
 }
-
-/*
-int	main(void)
-{
-	char	content[] = "et yohoho une bouteille de rhum";
-	t_list	*o1;
-
-	o1 = ft_lstnew(content);
-	printf("%s\n", (char *)o1->content);
-	printf("%p\n", o1->next);
-	free(o1);
-	return (0);
-}
-*/
